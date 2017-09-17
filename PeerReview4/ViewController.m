@@ -10,19 +10,35 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *startLocationInput;
+@property (weak, nonatomic) IBOutlet UITextField *endLocationAInput;
+@property (weak, nonatomic) IBOutlet UITextField *endLocationBInput;
+@property (weak, nonatomic) IBOutlet UITextField *endLocationCInput;
+
+@property (weak, nonatomic) IBOutlet UITextField *distanceALabel;
+@property (weak, nonatomic) IBOutlet UITextField *distanceBLabel;
+@property (weak, nonatomic) IBOutlet UITextField *distanceCLabel;
+
+@property (weak, nonatomic) IBOutlet UIButton *calculateDistanceButton;
+
 @end
 
 @implementation ViewController
 
+
+- (IBAction)calculateDistanceButtonTapped:(id)sender {
+    self.distanceCLabel.text = @"It worked";
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 

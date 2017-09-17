@@ -68,6 +68,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zul-R1-lBG">
                                 <rect key="frame" x="124" y="431" width="128" height="30"/>
                                 <state key="normal" title="Calculate Distance"/>
+                                <connections>
+                                    <action selector="calculateDistanceButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="36Z-Ge-q1F"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -98,6 +101,16 @@
                             <constraint firstItem="Zul-R1-lBG" firstAttribute="top" secondItem="j68-wM-O7c" secondAttribute="bottom" constant="112" id="zLC-rs-Afe"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="calculateDistanceButton" destination="Zul-R1-lBG" id="CRL-xZ-6p7"/>
+                        <outlet property="distanceALabel" destination="Ls5-A0-57o" id="gDW-Jg-tuJ"/>
+                        <outlet property="distanceBLabel" destination="mYd-4e-F3G" id="h1m-tW-I5A"/>
+                        <outlet property="distanceCLabel" destination="f9A-27-BW4" id="pZe-Lq-exp"/>
+                        <outlet property="endLocationAInput" destination="aGu-C1-kZY" id="euQ-m9-aRn"/>
+                        <outlet property="endLocationBInput" destination="Hao-hc-saV" id="Y6B-2n-i29"/>
+                        <outlet property="endLocationCInput" destination="j68-wM-O7c" id="us0-q0-FsT"/>
+                        <outlet property="startLocationInput" destination="Uid-sM-6vB" id="iOS-NV-GAb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
