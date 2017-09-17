@@ -1,14 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +22,59 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uid-sM-6vB">
+                                <rect key="frame" x="16" y="85" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zul-R1-lBG">
+                                <rect key="frame" x="123" y="318" width="128" height="30"/>
+                                <state key="normal" title="Calculate Distance"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Destination" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aGu-C1-kZY">
+                                <rect key="frame" x="16" y="421" width="170" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Second Destination" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hao-hc-saV">
+                                <rect key="frame" x="16" y="469" width="170" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Third Destination" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j68-wM-O7c">
+                                <rect key="frame" x="16" y="517" width="170" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hao-hc-saV" firstAttribute="width" secondItem="aGu-C1-kZY" secondAttribute="width" id="1i7-hR-bxO"/>
+                            <constraint firstItem="j68-wM-O7c" firstAttribute="leading" secondItem="Hao-hc-saV" secondAttribute="leading" id="3E7-zv-YiE"/>
+                            <constraint firstItem="j68-wM-O7c" firstAttribute="top" secondItem="Hao-hc-saV" secondAttribute="bottom" constant="18" id="6Te-TO-73d"/>
+                            <constraint firstItem="aGu-C1-kZY" firstAttribute="top" secondItem="Zul-R1-lBG" secondAttribute="bottom" constant="73" id="90C-ke-kfo"/>
+                            <constraint firstItem="Hao-hc-saV" firstAttribute="top" secondItem="aGu-C1-kZY" secondAttribute="bottom" constant="18" id="AGN-nF-a7E"/>
+                            <constraint firstItem="Zul-R1-lBG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FTH-dX-dC5"/>
+                            <constraint firstItem="Zul-R1-lBG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ffy-0R-nHa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Uid-sM-6vB" secondAttribute="trailing" id="HWh-Kb-dYU"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Uid-sM-6vB" secondAttribute="leading" id="HYu-ib-gEP"/>
+                            <constraint firstItem="j68-wM-O7c" firstAttribute="width" secondItem="Hao-hc-saV" secondAttribute="width" id="LNc-CD-YNe"/>
+                            <constraint firstItem="aGu-C1-kZY" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.45" constant="1" id="NHh-2v-5P8"/>
+                            <constraint firstItem="Uid-sM-6vB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xqv-tR-g3X"/>
+                            <constraint firstItem="Uid-sM-6vB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="65" id="c2g-DQ-4Ry"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="aGu-C1-kZY" secondAttribute="leading" id="ow5-kf-O0l"/>
+                            <constraint firstItem="Hao-hc-saV" firstAttribute="leading" secondItem="aGu-C1-kZY" secondAttribute="leading" id="uMP-cp-MaM"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="137.18140929535232"/>
         </scene>
     </scenes>
 </document>
